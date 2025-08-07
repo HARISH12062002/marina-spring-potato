@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fresh Fries & Potatoes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      background: #fefefe;
+    }
+
+    header {
+      background: #ffc107;
+      padding: 20px;
+      text-align: center;
+      color: #333;
+    }
+
+    nav {
+      background: #333;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      background: #555;
+    }
+
+    section {
+      padding: 40px;
+    }
+
+    .products {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .product-card {
+      flex: 1 1 200px;
+      border: 1px solid #ccc;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .contact-form {
+      max-width: 400px;
+      margin: auto;
+    }
+
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #eee;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Fresh Fries & Potatoes</h1>
+  <p>Locally grown. Crispy & Delicious.</p>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#products">Products</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+  <h2>About Us</h2>
+  <p>We sell farm-fresh spring potatoes and crispy French fries made daily. Quality and taste are our top priority!</p>
+</section>
+
+<section id="products">
+  <h2>Our Products</h2>
+  <div class="products">
+    <div class="product-card">
+      <h3>Spring Potatoes</h3>
+      <p>Fresh from the farm</p>
+      <p>₹25/kg</p>
+    </div>
+    <div class="product-card">
+      <h3>French Fries (Ready-to-eat)</h3>
+      <p>Crispy, hot, and delicious</p>
+      <p>₹50 per serving</p>
+    </div>
+    <div class="product-card">
+      <h3>Frozen Fries Pack</h3>
+      <p>500g – Ready to fry at home</p>
+      <p>₹80 per pack</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact Us</h2>
+  <div class="contact-form">
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="email" id="email" placeholder="Your Email" required>
+    <textarea id="message" placeholder="Your Message" rows="4" required></textarea>
+    <button onclick="submitForm()">Send Message</button>
+  </div>
+</section>
+
+<footer>
+  &copy; 2025 Fresh Fries & Potatoes. All rights reserved.
+</footer>
+
+<script>
+  function submitForm() {
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+
+    if (name && email && message) {
+      alert("Thank you for your message, " + name + "! We'll get back to you soon.");
+    } else {
+      alert("Please fill in all fields.");
+    }
+  }
+</script>
+
+</body>
+</html>
